@@ -1,13 +1,13 @@
 using HorizonSideRobots
 r = Robot(animate = true)
 
-function task8!(r, Side1, Side2, Side3, Side4)
+function task8!(r, Nord, West, Sud, Ost)
     i = 1
     while !ismarker(r) == 1
         a = i
         if i % 2 == 1
             while a != 0
-                move!(r, Side2)
+                move!(r, West)
                 if ismarker(r)
                     break
                 end
@@ -15,7 +15,7 @@ function task8!(r, Side1, Side2, Side3, Side4)
             end
             a = i
             while a != 0
-                move!(r, Side1)
+                move!(r, Nord)
                 if ismarker(r)
                     break
                 end
@@ -24,7 +24,7 @@ function task8!(r, Side1, Side2, Side3, Side4)
         else
  
             while a != 0
-                move!(r, Side4)
+                move!(r, Ost)
                 if ismarker(r)
                     break
                 end
@@ -32,7 +32,7 @@ function task8!(r, Side1, Side2, Side3, Side4)
             end
             a = i
             while a != 0
-                move!(r, Side3)
+                move!(r, Sud)
                 if ismarker(r)
                     break
                 end
